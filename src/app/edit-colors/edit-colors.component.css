@@ -1,0 +1,13 @@
+.colorSpan{
+    background-color: rgb(235, 195, 235);
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: inline-block;
+}
+#container{
+
+    position: absolute; 
+
+}

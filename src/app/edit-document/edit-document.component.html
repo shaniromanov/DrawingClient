@@ -1,0 +1,24 @@
+<h3>
+    {{currentDocument.documemtName}}
+  </h3>
+  <app-recivers-of-documents [docId]="currentDocument.docID" [userId]="currentUser"></app-recivers-of-documents>
+   
+ 
+  <div  class="edit-container">
+    <app-upload-image [docId]="currentDocument.docID" (imageUrl)="UpdateImageUrl($event)"></app-upload-image>
+  <button mat-icon-button color="primary" (click)="updateCurrentMode('Ellipse')"><mat-icon>panorama_fish_eye</mat-icon></button>
+  <button  mat-icon-button color="primary" (click)="updateCurrentMode('Rec')"><mat-icon>crop_landscape</mat-icon></button>
+  <app-edit-colors (BackColorEmitter)="onSelectedBackColor($event)" (ForeColorEmitter)="onSelectedForeColor($event)" ></app-edit-colors>
+ 
+
+</div>
+
+
+
+  <div #container id="container" >
+   <div id="EditShapeColor" #EditShapeColor ></div>
+   
+      <canvas #shapeCanvas class='canvas' id="shapeCanvas" [style.background-image]="'url(' + currentDocument.imageUrl + ')'"></canvas>
+      <canvas #drawingCanvas class='canvas' id="drawingCanvas" ></canvas>
+
+  </div>

@@ -1,0 +1,49 @@
+#container{
+    height:1200px;
+    width:800px; 
+    margin:auto;
+    background-color: rgb(235, 195, 235)
+}
+#container { position: relative; }
+.canvas { 
+    position: absolute; 
+    top:0;
+    left: 0;
+ 
+    background-size: 100% 100%;
+   
+}
+mat-icon{
+    color: #800080;
+}
+.edit-container{
+    text-align: center;
+    position: relative; 
+}
+
+.shape-btn{
+    margin: 5px;
+}
+button{
+    background-color: rgb(235, 195, 235);
+    margin: 5px;
+}
+h3{
+    position: relative; 
+}
+
+span{
+    background-color: rgb(235, 195, 235);
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: inline-block;
+}
+#EditShapeColor{
+    position: absolute;
+    background-color: white;
+}
+
+
+

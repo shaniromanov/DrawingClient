@@ -1,0 +1,7 @@
+
+  .container-border{
+    border-top:1px solid gray;
+    border-bottom:1px solid gray;
+    padding:5px 0px ;
+    width: 100%;
+  }

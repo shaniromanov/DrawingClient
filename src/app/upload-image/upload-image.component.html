@@ -1,0 +1,10 @@
+<input
+type="file"
+hidden
+multiple="false"
+accept="image/*"
+#imageUpload
+(change)="uploadImage($event)"
+/>
+<button mat-icon-button   color="primary" (click)="imageUpload.click()"  type="button"><mat-icon>add_photo_alternate</mat-icon></button>
+

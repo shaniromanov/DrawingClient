@@ -1,0 +1,29 @@
+
+<br>
+<form [formGroup]="createDocumentForm" (ngSubmit)="createDocument()">
+    <mat-card class="card small">
+      <mat-card-content>
+        <div class="d-flex justify-content-between row-wrapper">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Document Name</mat-label>
+            <input matInput  formControlName="DocumentName">
+            <mat-error class="validation-msg" *ngIf="DocumentName.hasError('required')">
+              *field is required
+          </mat-error>
+          </mat-form-field>
+
+        </div>
+      </mat-card-content>
+        <div class="space"></div>
+        <mat-card-actions>
+        <button  mat-raised-button color="primary" type="submit">Create Document</button>
+     
+        </mat-card-actions>
+    </mat-card>
+  </form>
+  
+  
+  
+  
+  
+  

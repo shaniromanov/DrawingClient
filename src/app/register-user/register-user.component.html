@@ -1,0 +1,39 @@
+<form [formGroup]="registerUserForm" (ngSubmit)="signUp()">
+  <mat-card class="card small">
+    <mat-card-content>
+      <div class="d-flex justify-content-between row-wrapper">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>User Name</mat-label>
+          <input matInput  formControlName="UserName">
+          <mat-error class="validation-msg" *ngIf="UserName.hasError('required')">
+            *field is required
+        </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Email Address</mat-label>
+          <input matInput  formControlName="EmailAddress" >
+          <mat-error *ngIf="EmailAddress.hasError('required')">
+            *field is required
+        </mat-error>
+        <mat-error class="validation-msg" *ngIf="EmailAddress.errors?.email">
+            *invalid email address
+        </mat-error>
+        <mat-error class="validation-msg" *ngIf="EmailAddress.errors?.usernameExists">
+            *registered user with this email address
+        </mat-error>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+      <div class="space"></div>
+      <mat-card-actions>
+      <button  mat-raised-button color="primary" type="submit">Sign Up</button>
+   
+      </mat-card-actions>
+  </mat-card>
+</form>
+
+
+
+
+

@@ -1,0 +1,17 @@
+.btn-upload {
+    width: 201px;
+    height: 51px;
+    margin-top: 4px;
+    margin-left: 4px;
+    text-align: right;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain ;
+  }
+  .row-wrapper {
+    width: 450px;
+  }
+  .space {
+    height: 5px;
+  }
+  

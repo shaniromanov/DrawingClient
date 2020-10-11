@@ -1,0 +1,29 @@
+<mat-card class="small-card">
+    <form [formGroup]="ShareForm" (ngSubmit)="Share()">
+      <div>
+        <mat-form-field appearance="outline" class="width-100">
+          <mat-label>Email Address</mat-label>
+          <input matInput  formControlName="UserId" >
+          <mat-error *ngIf="UserId.hasError('required')">
+            *field is required
+        </mat-error>
+        <mat-error class="validation-msg" *ngIf="UserId.errors?.email">
+            *invalid email address
+        </mat-error>
+        <mat-error class="validation-msg" *ngIf="UserId.errors?.usernameNotExists">
+            *The email address does not exist in the system
+        </mat-error>
+        </mat-form-field>
+      </div>
+      <br />
+      
+      <div class="d-flex justify-content-end">
+        <button type="submit" color="primary" class="width-100" mat-raised-button>
+          <mat-icon>share</mat-icon>
+          Share
+        </button>
+
+      </div>
+    </form>
+  </mat-card>
+  

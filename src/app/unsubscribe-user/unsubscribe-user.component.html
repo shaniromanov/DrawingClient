@@ -1,0 +1,13 @@
+<mat-card class="card small">
+    <mat-card-content>
+      <div class="d-flex justify-content-between row-wrapper">
+        {{currentUser.userName}}
+        Are you sure you want to unsubscribe?
+
+      </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button  mat-raised-button color="primary" type="button" (click)="Unsubscribe()">Yes</button>
+        <button  mat-raised-button color="primary" type="button" (click)="cancel()">No</button>
+        </mat-card-actions>
+    </mat-card> 

@@ -1,0 +1,15 @@
+<span id="container" #container [style.left]="positionX+'px'" [style.top]="positionY+'px'">
+<span class="colorSpan" [style.color]="BackColor"
+  [cpPosition]="'bottom'"
+  [cpPositionOffset]="'50%'"
+  [cpPositionRelativeToArrow]="true"
+  (colorPickerChange)="onSelectedBackColor($event)"
+  [(colorPicker)]="BackColor"><mat-icon [style.color]="BackColor">format_color_fill</mat-icon></span>
+
+  <span class="colorSpan" [style.color]="ForeColor"
+  [cpPosition]="'bottom'"
+  [cpPositionOffset]="'50%'"
+  [cpPositionRelativeToArrow]="true"
+  (colorPickerChange)="onSelectedForeColor($event)"
+  [(colorPicker)]="ForeColor"><mat-icon [style.color]="ForeColor">border_color</mat-icon></span>
+</span>

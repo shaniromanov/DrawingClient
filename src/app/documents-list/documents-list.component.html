@@ -1,0 +1,43 @@
+
+
+<br />
+<table class="table ">
+    <thead>
+        <th class="add-document" ><button type="button" (click)="addDocument()" class="add-btn"><mat-icon class="add-icon">add_circle_outline</mat-icon></button></th>
+        <th class="head"  colspan="3" >Your Document </th>
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let doc of documents;index as i">
+          
+            <td>  
+                <img [src]="doc.imageUrl" />
+            </td >
+              <td class="doc-name">{{doc.documemtName}}</td>
+            <td><button type="button" (click)="routeToEditDoc(doc)"><mat-icon>edit</mat-icon></button></td>
+            <td><button type="button" (click)="routeToShareDocument(doc.docID)"><mat-icon>share</mat-icon></button></td>
+            <td><button type="button" (click)="routeToShareList(doc.docID)" ><mat-icon>supervised_user_circle</mat-icon></button></td>
+            <td ><app-delete-document  [docId]="doc.docID" (deletedDoc)="onDeletedDoc(doc.docID)"></app-delete-document></td>
+       </tr>
+    </tbody>
+</table>
+
+    <table class="table">
+        <thead>
+            <th></th>
+            <th class="head" colspan="3">Shared Document </th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let doc of sharedDocuments;index as i">
+          <td></td>
+                <td>  <img [src]="doc.imageUrl" /></td>
+                <td class="doc-name">{{doc.documemtName}}</td>
+                <td><button type="button" (click)="routeToEditDoc(doc)"><mat-icon>edit</mat-icon></button></td>
+                <td><app-delete-share-document [userId]="userId" [docId]="doc.docID" (deletedDoc)="onDeletedShareDoc(doc.docID)"></app-delete-share-document></td>
+            </tr>
+        </tbody>
+    </table>
+   
+
+<br />
+<br />

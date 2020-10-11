@@ -1,0 +1,17 @@
+
+<table class="table ">
+    <thead>
+        <th class="head"  colspan="2" >User Sharing Document </th>
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users;index as i">
+              <td class="user-id">{{user.emailAddress}}</td>
+
+            <td > <app-delete-share-document [docId]="docId" [userId]="user.emailAddress" (deletedDoc)="onDeletedShareUser(user.emailAddress)"></app-delete-share-document></td>
+       </tr>
+    </tbody>
+</table>
+<div *ngIf="users.length==0">There are no shared users for this document</div>
+
+            <!-- -->
